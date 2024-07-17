@@ -15,7 +15,7 @@ fi
 max_jobs=4
 
 # Get the list of databases to exclude
-exclude_dbs="sys|information_schema|performance_schema|database"
+exclude_dbs="sys|information_schema|performance_schema|Database"
 
 # List databases and filter out those to exclude
 databases=$(mysql -e "SHOW DATABASES" | grep -vE "$exclude_dbs" | sort -r)
